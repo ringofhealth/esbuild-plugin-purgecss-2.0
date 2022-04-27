@@ -3,7 +3,7 @@ module.exports = function purgecssPlugin(options) {
         name: 'purgecss',
         setup(build) {
             if (!build.initialOptions.metafile) {
-                throw new Error('You should set metafile true to use this plugin.');
+                console.warn('You should set metafile true to use this plugin.');
             }
             const { PurgeCSS } = require('purgecss');
             const path = require('path');
